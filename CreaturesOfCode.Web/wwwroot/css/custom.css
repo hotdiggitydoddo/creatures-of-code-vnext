@@ -1,0 +1,90 @@
+﻿/*--Header--*/
+
+#top-strip {
+background: -moz-linear-gradient(top,  rgba(152,176,199,0.6) 0%, rgba(252,252,252,0.38) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(152,176,199,0.6)), color-stop(100%,rgba(252,252,252,0.38))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(152,176,199,0.6) 0%,rgba(252,252,252,0.38) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(152,176,199,0.6) 0%,rgba(252,252,252,0.38) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(152,176,199,0.6) 0%,rgba(252,252,252,0.38) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(152,176,199,0.6) 0%,rgba(252,252,252,0.38) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9998b0c7', endColorstr='#61fcfcfc',GradientType=0 ); /* IE6-9 */
+
+}
+
+.top-info a, .top-info2 a {
+color: #445B73!important;
+}
+
+.navbar {
+    background-image: url('../Images/fabric_of_squares_gray.png');
+}
+
+    .navbar .navbar-nav > li > a {
+        color: #5C77A1;
+    }
+
+ul.drop-down li {
+    background: #21405E;
+    border-bottom: 1px solid #8399C3;
+}
+
+
+
+/*--Body--*/
+body {
+    color: #454649;
+    /*background-color: rgb(216, 224, 234);*/
+    background-image: url('../Images/fabric_of_squares_gray.png');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000D69;
+}
+
+p {
+    color: #7E80AB;
+}
+
+
+
+/*--Footer--*/
+#footer_alt {
+    background: #001e3b;
+    background: -moz-linear-gradient(top, rgba(251 251, 251, 0) 0%, #98B0C7 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251, 251, 251, 0)), color-stop(100%,#98B0C7));
+    background: -webkit-linear-gradient(top, rgba(251, 251, 251, 0) 0%,#98B0C7 100%);
+    background: -o-linear-gradient(top, rgba(251, 251, 251, 0) 0%,#98B0C7 100%);
+    background: -ms-linear-gradient(top, rgba(251, 251, 251, 0) 0%,#98B0C7 100%);
+    background: linear-gradient(to bottom, rgba(251, 251, 251, 0) 0%,#98B0C7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(251, 251, 251, 0)', endColorstr='#98B0C7',GradientType=0 );
+}
+
+
+
+#footer_alt h6 {
+    color: #000D69;
+}
+
+#footer_alt a {
+    color: rgb(1,105,136);
+}
+
+.signin {
+    position: fixed;
+    right: 3em;
+    bottom: 0.5em;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 30px;
+    padding: 0.1em 0.3em 0.1em;
+    display: none;
+    border-radius: 8px;
+    z-index: 500;
+}
+
+/*--Blog--*/
+
+.category {
+ color: rgb(1, 148, 174);
+}
