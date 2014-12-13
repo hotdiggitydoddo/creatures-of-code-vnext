@@ -25,10 +25,10 @@
     var existing_onload = context.onload || new Function;
 
     context.onload = function() {
-      var images = document.getElementsByTagName("img"), retinaImages = [], i, image;
+      var images = document.getElementsByTagName("img"), retinaimages = [], i, image;
       for (i = 0; i < images.length; i++) {
         image = images[i];
-        retinaImages.push(new RetinaImage(image));
+        retinaimages.push(new RetinaImage(image));
       }
       existing_onload();
     }

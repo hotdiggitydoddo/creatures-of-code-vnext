@@ -16,7 +16,7 @@ color: #445B73!important;
 }
 
 .navbar {
-    background-image: url('../Images/fabric_of_squares_gray.png');
+    background-image: url('../images/fabric_of_squares_gray.png');
 }
 
     .navbar .navbar-nav > li > a {
@@ -34,7 +34,7 @@ ul.drop-down li {
 body {
     color: #454649;
     /*background-color: rgb(216, 224, 234);*/
-    background-image: url('../Images/fabric_of_squares_gray.png');
+    background-image: url('../images/fabric_of_squares_gray.png');
 }
 
 h1, h2, h3, h4, h5, h6 {

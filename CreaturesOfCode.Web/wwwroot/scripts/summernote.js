@@ -3093,7 +3093,7 @@
       afterCommand($editable);
     };
 
-    this.imageShape = function ($editable, value, $target) {
+    this.imageshape = function ($editable, value, $target) {
       $target.removeClass('img-rounded img-circle img-thumbnail');
 
       if (value) {
@@ -3124,22 +3124,22 @@
      * @param {Boolean} [bKeepRatio] - keep ratio
      */
     this.resizeTo = function (pos, $target, bKeepRatio) {
-      var imageSize;
+      var imagesize;
       if (bKeepRatio) {
         var newRatio = pos.y / pos.x;
         var ratio = $target.data('ratio');
-        imageSize = {
+        imagesize = {
           width: ratio > newRatio ? pos.x : pos.y / ratio,
           height: ratio > newRatio ? pos.x * ratio : pos.y
         };
       } else {
-        imageSize = {
+        imagesize = {
           width: pos.x,
           height: pos.y
         };
       }
 
-      $target.css(imageSize);
+      $target.css(imagesize);
     };
 
     /**
@@ -3486,7 +3486,7 @@
         var pos = isAirMode ? $image.offset() : $image.position();
 
         // include margin
-        var imageSize = {
+        var imagesize = {
           w: $image.outerWidth(true),
           h: $image.outerHeight(true)
         };
@@ -3495,10 +3495,10 @@
           display: 'block',
           left: pos.left,
           top: pos.top,
-          width: imageSize.w,
-          height: imageSize.h
+          width: imagesize.w,
+          height: imagesize.h
         }).data('target', styleInfo.image); // save current image element.
-        var sizingText = imageSize.w + 'x' + imageSize.h;
+        var sizingText = imagesize.w + 'x' + imagesize.h;
         $selection.find('.note-control-selection-info').text(sizingText);
       } else {
         $selection.hide();
@@ -3747,12 +3747,12 @@
     };
 
     /**
-     * insert Images from file array.
+     * insert images from file array.
      *
      * @param {jQuery} $editable
      * @param {File[]} files
      */
-    var insertImages = function ($editable, files) {
+    var insertimages = function ($editable, files) {
       var callbacks = $editable.data('callbacks');
 
       // If onImageUpload options setted
@@ -3812,7 +3812,7 @@
             editor.insertImage($editable, data);
           } else {
             // array of files
-            insertImages($editable, data);
+            insertimages($editable, data);
           }
         }).fail(function () {
           editor.restoreRange($editable);
@@ -3997,7 +3997,7 @@
       var isClipboardImage = item.kind === 'file' && item.type.indexOf('image/') !== -1;
 
       if (isClipboardImage) {
-        insertImages($editable, [item.getAsFile()]);
+        insertimages($editable, [item.getAsFile()]);
       }
 
       editor.afterCommand($editable);
@@ -4066,7 +4066,7 @@
 
         // before command: detect control selection element($target)
         var $target;
-        if ($.inArray(eventName, ['resize', 'floatMe', 'removeMedia', 'imageShape']) !== -1) {
+        if ($.inArray(eventName, ['resize', 'floatMe', 'removeMedia', 'imageshape']) !== -1) {
           var $selection = layoutInfo.handle().find('.note-control-selection');
           $target = $($selection.data('target'));
         }
@@ -4230,7 +4230,7 @@
         if (dataTransfer && dataTransfer.files) {
           var layoutInfo = makeLayoutInfo(event.currentTarget || event.target);
           layoutInfo.editable().focus();
-          insertImages(layoutInfo.editable(), dataTransfer.files);
+          insertimages(layoutInfo.editable(), dataTransfer.files);
         }
       }).on('dragover', false); // prevent default dragover event
     };
@@ -4813,22 +4813,22 @@
 
         var roundedButton = tplIconButton('fa fa-square icon-unchecked', {
           title: lang.image.shapeRounded,
-          event: 'imageShape',
+          event: 'imageshape',
           value: 'img-rounded'
         });
         var circleButton = tplIconButton('fa fa-circle-o icon-circle-blank', {
           title: lang.image.shapeCircle,
-          event: 'imageShape',
+          event: 'imageshape',
           value: 'img-circle'
         });
         var thumbnailButton = tplIconButton('fa fa-picture-o icon-picture', {
           title: lang.image.shapeThumbnail,
-          event: 'imageShape',
+          event: 'imageshape',
           value: 'img-thumbnail'
         });
         var noneButton = tplIconButton('fa fa-times icon-times', {
           title: lang.image.shapeNone,
-          event: 'imageShape',
+          event: 'imageshape',
           value: ''
         });
 
