@@ -14,10 +14,14 @@
         "Microsoft.AspNet.Mvc": "6.0.0.0-beta1",
         "Microsoft.Framework.ConfigurationModel.Json": "1.0.0-beta1",
         "Microsoft.AspNet.Server.IIS": "1.0.0-beta1",
-        "Microsoft.AspNet.StaticFiles": "1.0.0-beta1"
+        "Microsoft.AspNet.StaticFiles": "1.0.0-beta1",
+        "Kestrel": "1.0.0-beta1"
     },
     "frameworks": {
         "aspnet50": { },
         "aspnetcore50": { }
+    },
+    "commands": {
+        "kestrel": "Microsoft.AspNet.Hosting --server Kestrel --server.urls http://localhost:5006"
     }
 }
